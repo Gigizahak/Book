@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/iei.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/card.css">
+    <link rel="stylesheet" href="./assets/css/by.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header_con-1">
+            <a class="header_login" href="/login">
+                <img class="header_login-img" src="./assets/img/Vector.png" alt="">Log in
+            </a>
+        </div>
+        <div class="header_con-2">
+            <a class="header_basket" href="/basket">
+                <img class="header_basket-img" src="./assets/img/basket_96252(1).png" alt="">Basket
+            </a>
+        </div>
+        <div class="header_con-3">
+
+            <select aria-valuetext="Category" class="header_category" name="category" >
+                <option value="1">Fiction</option>
+            </select>
+            <form class="header_con-3" method="POST">
+                <input class="header_category" type="submit" value="Поиск">
+            </form>
+        </div>
+        <h1 class="name">BEST BOOK</h1>
+    </div>
+    <div>
+        <div class="card">
+            <img class="card__img" src="./assets/img/Rectangle 10.png" alt="">
+            <p class="card_prise">1200 ₽</p>
+            <p class="card_name">Благославение небожителей</p>
+            <p class="card_author">Тунсю Мосян</p>
+            <button class="card_button-1" onclick="window.location.href = '/'">Заказать</button>
+        </div>
+    </div>
+</body>
+</html>
