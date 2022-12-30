@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .models import Book
 
@@ -23,21 +23,29 @@ class CategoryView(ListView):
     context_object_name = 'books'
 
     def get_queryset(self):
-        return Book.objects.filter(cat__slug=self.kwargs['cat_slug'])
+        return Book.objects.filter(category__slug=self.kwargs['cat_slug'])
 
 
 class CreateBook(CreateView):
+    model = Book
     form_class = 'BookForm'
     template_name = 'Book/order.html'
-    success_url = reverse_lazy('home')
+
+    def get_success_url(self):
+        return reverse('home')
 
 
 class EditBook(UpdateView):
     form_class = 'BookForm'
     template_name = 'Book/edit.html'
-    success_url = reverse_lazy('home')
+
+    def get_success_url(self):
+        return reverse('home')
 
 
 class DeleteBook(DeleteView):
+    model = Book
     template_name = 'Book/delete.html'
-    success_url = reverse_lazy('home')
+
+    def get_success_url(self):
+        return reverse('home')
