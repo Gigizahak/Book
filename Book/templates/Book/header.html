@@ -1,0 +1,23 @@
+{% load static %}
+<div class="header">
+    <div class="header-container">
+        <div class="header_con-1">
+            <a class="header_login" href="{%url 'login' %}">
+                <img class="header_login-img" src="{% static 'img/Vector.png' %}" alt="">Войти
+            </a>
+        </div>
+        <form class="header_con-3" method="POST">
+            {% csrf_token %}
+            <select aria-valuetext="Category" class="header_category" name="category" >
+                <option value="1">Fiction</option>
+            </select>
+            <input class="header_category" type="submit" value="Поиск">
+        </form>
+        <a href="{% url 'home' %}" class="name">BEST BOOK</a>
+        <div class="header_con-2">
+            <a class="header_basket" href="/basket">
+                <img class="header_basket-img" src="{% static 'img/basket_96252(1).png' %}" alt="">Basket
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/iei.css'%}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/card.css' %}">
+    <link rel="stylesheet" href="{% static 'css/by.css' %}">
+</head>
+<body>
+    {% include 'Book/header.html' %}
+    <div class="container">
+        {% for book in books %}
+        <div class="card">
+            <img class="card__img" src="{% static 'img/Rectangle 10.png' %}" alt="">
+            <p class="card_prise">{% book.price %} ₽</p>
+            <p class="card_name">{% book.name %}</p>
+            <p class="card_author">{% book.author %}</p>
+            <button class="card_button-1" onclick="window.location.href = '/'">Заказать</button>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

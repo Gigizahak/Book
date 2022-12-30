@@ -1,0 +1,35 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    margin: 0 auto;
+    width: 1024px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    padding: 15px;
+    width: 153px;
+    height: 400px;
+}
+.card_prise {
+    padding: 15px 0 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+.card_name {
+    padding: 0 0 5px 0;
+    font-size: 18px;
+}
+.card_author {
+    padding: 0 0 5px 0;
+    font-size: 14px;
+    color: rgb(138, 138, 138);
+}
+.card_button-1 {
+    display: flex;
+    margin: auto;
+    background-color: rgb(86, 233, 233);
+    padding: 5px 40px;
+    border-radius: 5px;
+}

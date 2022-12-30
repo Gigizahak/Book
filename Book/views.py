@@ -1,13 +1,19 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Book
+from .models import Book, Basket
 
 
 # Create your views here.
 class BookListView(ListView):
     model = Book
     template_name = 'Book/home.html'
+    context_object_name = 'books'
+
+
+class BookBasketViev(ListView):
+    model = Basket
+    template_name = 'Book/basket.html'
     context_object_name = 'books'
 
 

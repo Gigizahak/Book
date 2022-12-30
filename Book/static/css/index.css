@@ -1,0 +1,52 @@
+.header{
+    padding: 10px;
+    background-color: rgb(2, 209, 209);
+}
+.header-container{
+    margin: 0 auto;
+    width: 1024px;
+    display: flex;
+    justify-content: space-around;
+}
+.name {
+    font-size: 50px;
+    display: flex;
+    color: white;
+}
+.header_login {
+    width: 30px;
+    height: 10px;
+    color: white;
+}
+.header_con-1 {
+    width: 56px;
+}
+.header_login-img {
+    padding: 0 6px;
+}
+.header_category {
+    display: flex;
+    flex-direction:row-reverse;
+    color: white;
+    font-size: 30px;
+}
+.header_basket {
+    color: white;
+    text-align: center;
+}
+.header_basket-img {
+    width: 49px;
+    height: 49px;
+    padding: 0 6px;
+    text-align: center;
+    color: white;
+}
+.header_con-2 {
+    width: 56px;
+}
+.header_con-3 {
+    width: 140px;
+    display: flex;
+    flex-direction: row;
+
+}
